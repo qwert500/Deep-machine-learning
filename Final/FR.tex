@@ -1,0 +1,105 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor4}{rgb}{0.49400,0.18400,0.55600}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=5.877in,
+height=2.934in,
+at={(0.986in,0.473in)},
+scale only axis,
+xmin=0,
+xmax=22,
+xlabel style={font=\color{white!15!black}},
+xlabel={Number of base learners},
+ymin=0.6,
+ymax=0.85,
+ylabel style={font=\color{white!15!black}},
+ylabel={Test accuracy},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Bagging performance Flower Recognition},
+axis x line*=bottom,
+axis y line*=left,
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, mark=diamond, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+2	0.6953\\
+3	0.7066\\
+4	0.701\\
+5	0.7193\\
+6	0.7151\\
+7	0.7193\\
+8	0.7179\\
+9	0.7207\\
+10	0.7151\\
+11	0.7137\\
+12	0.7264\\
+13	0.7221\\
+14	0.725\\
+15	0.7278\\
+16	0.7236\\
+17	0.7264\\
+18	0.7292\\
+19	0.7264\\
+20	0.725\\
+};
+\addlegendentry{Average}
+
+\addplot [color=mycolor2, mark=o, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+2	0.6643\\
+3	0.6855\\
+4	0.7052\\
+5	0.7151\\
+6	0.7066\\
+7	0.7137\\
+8	0.7109\\
+9	0.7165\\
+10	0.7123\\
+11	0.7137\\
+12	0.7207\\
+13	0.7207\\
+14	0.7179\\
+15	0.7207\\
+16	0.725\\
+17	0.7264\\
+18	0.725\\
+19	0.725\\
+20	0.725\\
+};
+\addlegendentry{Max voting}
+
+\addplot [color=mycolor3, mark=square, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+2	0.6812\\
+5	0.7123\\
+10	0.7137\\
+15	0.7264\\
+20	0.7207\\
+};
+\addlegendentry{Linear stacking}
+
+\addplot [color=mycolor4, mark=triangle, mark options={solid, rotate=90, mycolor4}]
+  table[row sep=crcr]{%
+2	0.6841\\
+5	0.7151\\
+10	0.7179\\
+15	0.7278\\
+20	0.7221\\
+};
+\addlegendentry{Nonlinear stacking}
+
+\end{axis}
+\end{tikzpicture}%

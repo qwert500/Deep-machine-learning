@@ -1,0 +1,164 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor4}{rgb}{0.49400,0.18400,0.55600}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=5.877in,
+height=2.934in,
+at={(0.986in,0.473in)},
+scale only axis,
+xmin=0,
+xmax=50,
+xlabel style={font=\color{white!15!black}},
+xlabel={Number of base learners},
+ymin=0.6,
+ymax=0.85,
+ylabel style={font=\color{white!15!black}},
+ylabel={Test accuracy},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Bagging performance CIFAR10},
+axis x line*=bottom,
+axis y line*=left,
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, mark=diamond, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+2	0.7238\\
+3	0.7565\\
+4	0.7685\\
+5	0.7718\\
+6	0.7747\\
+7	0.7778\\
+8	0.7807\\
+9	0.7804\\
+10	0.7843\\
+11	0.7849\\
+12	0.7851\\
+13	0.7869\\
+14	0.7875\\
+15	0.788\\
+16	0.7877\\
+17	0.7868\\
+18	0.7885\\
+19	0.7886\\
+20	0.7872\\
+21	0.7893\\
+22	0.7904\\
+23	0.7908\\
+24	0.7896\\
+25	0.7906\\
+26	0.7908\\
+27	0.7906\\
+28	0.7923\\
+29	0.792\\
+30	0.7921\\
+31	0.7932\\
+32	0.7914\\
+33	0.7917\\
+34	0.7909\\
+35	0.7917\\
+36	0.7904\\
+37	0.7909\\
+38	0.7908\\
+39	0.7909\\
+40	0.7913\\
+41	0.7913\\
+42	0.792\\
+43	0.7921\\
+};
+\addlegendentry{Average}
+
+\addplot [color=mycolor2, mark=o, mark options={solid, mycolor2}]
+  table[row sep=crcr]{%
+2	0.6095\\
+3	0.7265\\
+4	0.7481\\
+5	0.7584\\
+6	0.7639\\
+7	0.7662\\
+8	0.7689\\
+9	0.7703\\
+10	0.7743\\
+11	0.7774\\
+12	0.78\\
+13	0.7801\\
+14	0.7829\\
+15	0.7835\\
+16	0.786\\
+17	0.7859\\
+18	0.7869\\
+19	0.7882\\
+20	0.7872\\
+21	0.7883\\
+22	0.7886\\
+23	0.7889\\
+24	0.7888\\
+25	0.7892\\
+26	0.7896\\
+27	0.7907\\
+28	0.7902\\
+29	0.7899\\
+30	0.7898\\
+31	0.7904\\
+32	0.7905\\
+33	0.7905\\
+34	0.7909\\
+35	0.7914\\
+36	0.7919\\
+37	0.792\\
+38	0.7906\\
+39	0.7903\\
+40	0.7902\\
+41	0.79\\
+42	0.7902\\
+43	0.7909\\
+44	0.7897\\
+45	0.7897\\
+46	0.7888\\
+};
+\addlegendentry{Max voting}
+
+\addplot [color=mycolor3, mark=square, mark options={solid, mycolor3}]
+  table[row sep=crcr]{%
+2	0.7296\\
+5	0.7704\\
+10	0.7836\\
+15	0.7865\\
+20	0.7866\\
+25	0.7906\\
+30	0.7917\\
+35	0.7914\\
+40	0.7898\\
+45	0.7903\\
+};
+\addlegendentry{Linear stacking}
+
+\addplot [color=mycolor4, mark=triangle, mark options={solid, rotate=90, mycolor4}]
+  table[row sep=crcr]{%
+2	0.7159\\
+5	0.7706\\
+10	0.7829\\
+15	0.7863\\
+20	0.7866\\
+25	0.7918\\
+30	0.7901\\
+35	0.7922\\
+40	0.791\\
+45	0.79\\
+};
+\addlegendentry{Nonlinear stacking}
+
+\end{axis}
+\end{tikzpicture}%
